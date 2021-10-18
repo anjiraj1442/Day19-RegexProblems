@@ -15,10 +15,10 @@ public class UserRegistrationRegex extends UserDetails{
     static String firstName,lastName,emailId,mobileNum,password;
 
     public static void main(String[] args) {
-        userFirstName();
-        userLastName();
-        userEmailId();
-        userMobileNum();
+//        userFirstName();
+//        userLastName();
+//        userEmailId();
+//        userMobileNum();
         userPassword();
 
     }

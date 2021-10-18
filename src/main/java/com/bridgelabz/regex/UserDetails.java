@@ -5,6 +5,7 @@ import java.util.regex.Pattern;
 
 public class UserDetails {
     static String regex;
+
     public static void firstname(String firstName) {
         String regex = "^[A-Z]{1}[a-z]{2,}$";
         Pattern pattern = Pattern.compile(regex);
@@ -27,6 +28,7 @@ public class UserDetails {
             System.out.println("Invalid");
         }
     }
+
     public static void emailid(String emailId) {
         //email abc.xyz@bl.co
         String regex = "^[a-z0-9]+([_+-.][0-9a-z]+)*@[a-z]+.[a-z]{2,3}$";
@@ -38,8 +40,9 @@ public class UserDetails {
             System.out.println("Invalid");
         }
     }
+
     public static void mobilenum(String mobileNum) {
-         regex = "^[0-9]{2}\\s{1}[0-9]{10}$";
+        regex = "^[0-9]{2}\\s{1}[0-9]{10}$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(mobileNum);
         if (matcher.matches()) {
@@ -48,8 +51,9 @@ public class UserDetails {
             System.out.println("Invalid");
         }
     }
+
     public static void password(String password) {
-        regex = "^[a-z](?=.*[A-Z]).{8,}$";
+        regex = "^[a-z](?=.*[A-Z]+)(?=.*[0-9]+).{8,}$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(password);
         if (matcher.matches()) {
@@ -59,4 +63,3 @@ public class UserDetails {
         }
     }
 }
-
