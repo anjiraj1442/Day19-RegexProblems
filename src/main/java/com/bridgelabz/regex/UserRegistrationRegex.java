@@ -12,12 +12,13 @@ import java.util.Scanner;
 
 public class UserRegistrationRegex extends UserDetails{
     static Scanner scanner = new Scanner(System.in);
-    static String firstName,lastName,emailId;
+    static String firstName,lastName,emailId,mobileNum;
 
     public static void main(String[] args) {
         userFirstName();
         userLastName();
         userEmailId();
+        userMobileNum();
 
     }
     public static void userFirstName() {
@@ -34,5 +35,10 @@ public static void userLastName(){
         System.out.println("Enter your EmailId");
        emailId = scanner.next();
        UserDetails.emailid(emailId);
+    }
+    public static void userMobileNum() {
+        System.out.println("Enter your MobileNumber");
+        mobileNum = scanner.next();
+        UserDetails.mobilenum(mobileNum);
     }
 }
